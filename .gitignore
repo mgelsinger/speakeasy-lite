@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+temp/
+speakeasy.log
+dist/
+build/
+*.spec
+SpeakeasyLite-Setup.exe
+app/assets/icon.ico
+models/
