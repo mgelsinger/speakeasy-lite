@@ -32,9 +32,10 @@ if ($LASTEXITCODE -ne 0) {
 git push origin $Version
 
 # 3. Create the GitHub release and attach the installer
+$notes = "Speakeasy Lite $Version`n`nRequires an NVIDIA GPU with recent drivers.`nWhisper model (~1.5 GB) downloads automatically on first launch."
 gh release create $Version "SpeakeasyLite-Setup.exe" `
     --title "Speakeasy Lite $Version" `
-    --notes "Speakeasy Lite $Version``n``nRequires an NVIDIA GPU with recent drivers.``nWhisper model (~1.5 GB) downloads automatically on first launch." `
+    --notes $notes `
     --repo mgelsinger/speakeasy-lite
 
 Write-Host ""
